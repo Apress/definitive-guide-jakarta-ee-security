@@ -1,6 +1,6 @@
 # Apress Source Code
 
-This repository accompanies [*%title%*](https://www.apress.com/%isbn%) by %author% (Apress, %pubyear%).
+This repository accompanies [*The Definitive Guide to Jakarta EE Security*](https://www.apress.com/%isbn%) by Arjan Tijms, Werner Keil, and Thodoris Bais (Apress, 2021).
 
 [comment]: #cover
 ![Cover image](%isbn%.jpg)
