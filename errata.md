@@ -1,4 +1,4 @@
-# Errata for *Book Title*
+# Errata for *The Definitive Guide to Jakarta EE Security*
 
 On **page xx** [Summary of error]:
  
