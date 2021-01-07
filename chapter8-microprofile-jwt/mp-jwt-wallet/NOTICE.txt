@@ -1,0 +1,14 @@
+=========================================================================
+==  NOTICE file corresponding to section 4(d) of the Apache License,   ==
+==  Version 2.0                                                        ==
+=========================================================================
+
+Portions of this software were originally based on the following:
+* Sample project for the Eclipse newsletter Sep, 2017
+  https://github.com/MicroProfileJWT/eclipse-newsletter-sep-2017
+  under Apache License, v2.0
+
+PackageCopyrightText: <text>
+Scott M Stark sstark@redhat.com,
+Werner Keil werner@catmedia.us,
+</text>
