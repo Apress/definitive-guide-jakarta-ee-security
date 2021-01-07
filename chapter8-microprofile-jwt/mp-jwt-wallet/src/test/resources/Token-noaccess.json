@@ -1,0 +1,14 @@
+{
+  "iss": "https://server.example.com",
+  "jti": "a-123.3",
+  "sub": "24400320#2",
+  "upn": "jdoe3@example.com",
+  "preferred_username": "jdoe3",
+  "aud": "wallet",
+  "exp": 1311281970,
+  "iat": 1311280970,
+  "auth_time": 1311280969,
+  "groups": [
+    "NoAccess"
+  ]
+}

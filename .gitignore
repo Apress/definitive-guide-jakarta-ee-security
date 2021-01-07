@@ -1,0 +1,44 @@
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+pom.xml.versionsBackup
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+!.idea
+.idea/*
+!.idea/copyright/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### PisMockWebApp ###
+node_modules/
+node
+.vscode
+
+### Other ###
+bin/
+.factorypath
+*.log
+logs
+log
+.DS_Store
+**/META-INF
+**/main/java/META-INF

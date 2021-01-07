@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+		xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+	<modelVersion>4.0.0</modelVersion>
+	<prerequisites>
+		<maven>3.0.0</maven>
+	</prerequisites>
+	<licenses>
+        <license>
+			<name>Freeware License</name>
+			<url>./LICENSE.txt</url>
+		</license>
+		<license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+	
+	<modules>
+		<module>chapter8-microprofile-jwt</module>
+	</modules>
+
+	<groupId>com.apress.jakartasecbook</groupId>
+    <artifactId>def-guide-jakarta-ee-security</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>The Definitive Guide to Jakarta EE Security</name>
+    <description>Source code for the Definitive Guide to Jakarta EE Security</description>	
+
+	<scm>
+		<url>https://github.com/Apress/definitive-guide-jakarta-ee-security</url>
+		<connection>scm:git:git@github.com/Apress/definitive-guide-jakarta-ee-security.git</connection>
+		<developerConnection>scm:git:git@github.com/Apress/definitive-guide-jakarta-ee-security.git</developerConnection>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+	
+	<developers>
+		<developer>
+            <id>arjantijms</id>
+            <name>Arjan Tijms</name>
+            <organization>Apress</organization>
+            <organizationUrl>https://www.apress.com</organizationUrl>
+            <roles>
+                <role>Author</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>keilw</id>
+            <name>Werner Keil</name>
+            <organization>Apress</organization>
+            <organizationUrl>https://www.apress.com</organizationUrl>
+            <roles>
+                <role>Author</role>
+            </roles>
+        </developer>
+		<developer>
+            <id>thodorisbais</id>
+            <name>Thodoris Bais</name>
+            <organization>Apress</organization>
+            <organizationUrl>https://www.apress.com</organizationUrl>
+            <roles>
+                <role>Author</role>
+            </roles>
+        </developer>
+    </developers>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Target Java EE 8 server. -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>8.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.22.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>2.22.2</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+		<!-- Target Java EE 8 server. -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.5.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.5.2</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>
