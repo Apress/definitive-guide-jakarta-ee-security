@@ -29,15 +29,15 @@
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <version.wildfly.swarm>2018.2.0.Final</version.wildfly.swarm>
-    <version.eclipse.jwt>1.0</version.eclipse.jwt>
+    <version.wildfly.swarm>2.7.0.Final</version.wildfly.swarm>
+    <version.eclipse.jwt>1.2</version.eclipse.jwt>
     <version.testng>6.10</version.testng>
   </properties>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.wildfly.swarm</groupId>
+        <groupId>io.thorntail</groupId>
         <artifactId>bom-all</artifactId>
         <version>${version.wildfly.swarm}</version>
         <type>pom</type>
@@ -46,7 +46,7 @@
       <dependency>
         <groupId>org.jboss.arquillian</groupId>
         <artifactId>arquillian-bom</artifactId>
-        <version>1.1.13.Final</version>
+        <version>1.6.0.Final</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
@@ -91,14 +91,14 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- The wildfly-swarm fractions -->
+    <!-- The thorntail fractions -->
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>microprofile-jwt</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>arquillian</artifactId>
       <scope>test</scope>
     </dependency>
