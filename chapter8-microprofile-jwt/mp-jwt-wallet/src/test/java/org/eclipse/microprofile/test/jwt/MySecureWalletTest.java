@@ -45,17 +45,18 @@ public class MySecureWalletTest extends Arquillian {
         //System.setProperty("swarm.resolver.offline", "true");
         //System.setProperty("swarm.logging", "DEBUG");
         //System.setProperty("swarm.debug.port", "8888");
-
+    	// TODO check if those are still relevant in Thorntail or beyond?
+    	
         // Get the public key of the token signer
         URL publicKey = MySecureWalletTest.class.getResource("/publicKey.pem");
         WebArchive webArchive = ShrinkWrap
                 .create(WebArchive.class, "MySecureEndpoint.war")
-                // Place the public key in the war as /MP-JWT-SIGNER - Wildfly-Swarm specific
+                // Place the public key in the war as /MP-JWT-SIGNER - Thorntail specific
                 .addAsManifestResource(publicKey, "/MP-JWT-SIGNER")
                 .addClass(MySecureWallet.class)
                 .addClass(MyRestApp.class)
                 .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
-                // Add Wildfly-Swarm specific configuration of the security domain
+                // Add Thorntail specific configuration of the security domain
                 .addAsResource("project-defaults.yml", "/project-defaults.yml")
                 .addAsWebInfResource("jwt-roles.properties", "classes/jwt-roles.properties")
                 .setWebXML("WEB-INF/web.xml")
@@ -250,5 +251,4 @@ public class MySecureWalletTest extends Arquillian {
         Response response = target.request(MediaType.APPLICATION_JSON).get();
         Assert.assertEquals(response.getStatus(), HttpURLConnection.HTTP_UNAUTHORIZED);
     }
-
 }
