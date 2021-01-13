@@ -6,7 +6,7 @@ Sample project for chapter 8 of the book The Definitive Guide to Jakarta EE Secu
 # Updated Instructions for the 2.7.0.Final release of Thorntail
 1. git clone https://github.com/Apress/definitive-guide-jakarta-ee-security
 1. cd chapter8-microprofile-jwt/mp-jwt-wallet
-1. Run mvn test from the directory to build and run the test example
+1. Run `mvn test` from the directory to build and run the test example
 
 ## Sample
 ```bash
