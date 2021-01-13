@@ -35,8 +35,8 @@ public class MySecureWalletTest extends Arquillian {
     private URL baseURL;
 
     /**
-     * Create a CDI aware JAX-RS application archive with our endpoints and
-     * @return the JAX-RS application archive
+     * Create a CDI aware Jakarta REST application archive with our endpoints and
+     * @return the Jakarta REST application archive
      * @throws IOException - on resource failure
      */
     @Deployment(testable=true)
