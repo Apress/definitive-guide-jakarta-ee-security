@@ -51,7 +51,7 @@ public class MySecureWalletTest extends Arquillian {
         URL publicKey = MySecureWalletTest.class.getResource("/publicKey.pem");
         WebArchive webArchive = ShrinkWrap
                 .create(WebArchive.class, "MySecureEndpoint.war")
-                // Place the public key in the war as /MP-JWT-SIGNER - Thorntail specific
+                // Place the public key in the war as /MP-JWT-SIGNER - Wildfly/Thorntail specific
                 .addAsManifestResource(publicKey, "/MP-JWT-SIGNER")
                 .addClass(MySecureWallet.class)
                 .addClass(MyRestApp.class)
