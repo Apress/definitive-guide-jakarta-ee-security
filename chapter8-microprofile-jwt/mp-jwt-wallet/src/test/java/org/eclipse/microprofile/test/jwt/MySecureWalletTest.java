@@ -69,7 +69,7 @@ public class MySecureWalletTest extends Arquillian {
     @Test(description = "Verify that jdoe can view balance using Token1.json")
     public void checkBalance() throws Exception {
         Reporter.log("Begin checkBalance");
-        String token = TokenUtils.generateTokenString("/Token1.json");
+        final String token = TokenUtils.signClaims("/Token1.json");
 
         String uri = baseURL.toExternalForm() + "/wallet/balance";
         WebTarget target = ClientBuilder.newClient()
@@ -84,7 +84,7 @@ public class MySecureWalletTest extends Arquillian {
     @Test(description = "Verify that jdoe can debit balance using Token1.json")
     public void debitBalance() throws Exception {
         Reporter.log("Begin debitBalance");
-        String token = TokenUtils.generateTokenString("/Token1.json");
+        final String token = TokenUtils.signClaims("/Token1.json");
 
         String uri = baseURL.toExternalForm() + "/wallet/debit";
         WebTarget target = ClientBuilder.newClient()
@@ -101,7 +101,7 @@ public class MySecureWalletTest extends Arquillian {
     @Test(description = "Verify that jdoe can issue debit > $1000 using Token1.json")
     public void whaleDebitBalance() throws Exception {
         Reporter.log("Begin WhaleDebitBalance");
-        String token = TokenUtils.generateTokenString("/Token1.json");
+        final String token = TokenUtils.signClaims("/Token1.json");
 
         String uri = baseURL.toExternalForm() + "/wallet/debit";
         WebTarget target = ClientBuilder.newClient()
@@ -173,7 +173,7 @@ public class MySecureWalletTest extends Arquillian {
     @Test(description = "Verify that jdoe cannot debit amount about the $2500 spendingLimit of Token1.json")
     public void bigDebitBalanceFail() throws Exception {
         Reporter.log("Begin bigDebitBalanceFail");
-        String token = TokenUtils.generateTokenString("/Token1.json");
+        final String token = TokenUtils.signClaims("/Token1.json");
 
         // First get the current balance
         String uri = baseURL.toExternalForm() + "/wallet/balance";
@@ -208,7 +208,7 @@ public class MySecureWalletTest extends Arquillian {
     @Test(description = "Verify that jdoe2 cannot debit > 1000 using Token2.json")
     public void whaleDebitBalanceFail() throws Exception {
         Reporter.log("Begin WhaleDebitBalanceFail");
-        String token = TokenUtils.generateTokenString("/Token2.json");
+        final String token = TokenUtils.signClaims("/Token2.json");
 
         String uri = baseURL.toExternalForm() + "/wallet/debit";
         WebTarget target = ClientBuilder.newClient()
