@@ -20,6 +20,7 @@
     </licenses>
 	
 	<modules>
+		<module>chapter6-javase-underpinnings</module>
 		<module>chapter8-microprofile-jwt</module>
 	</modules>
 
