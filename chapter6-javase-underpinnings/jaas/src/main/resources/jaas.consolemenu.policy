@@ -1,0 +1,17 @@
+grant codebase "file:./target/jaas-1.0.0-SNAPSHOT.jar" {
+    permission javax.security.auth.AuthPermission "createLoginContext.SimpleJAASApp";
+    permission javax.security.auth.AuthPermission "doAsPrivileged";
+    permission java.lang.RuntimePermission "readFileDescriptor";
+    permission java.lang.RuntimePermission "writeFileDescriptor";
+};
+
+grant codebase "file:./target/jaas-1.0.0-SNAPSHOT.jar" {
+    permission javax.security.auth.AuthPermission "modifyPrincipals";
+};
+
+grant Principal com.apress.chapter6.jaas.SimpleUserPrincipal "admin" {
+    permission java.util.PropertyPermission "java.home", "read";
+    permission java.util.PropertyPermission "user.home", "read";
+    permission java.io.FilePermission "foo.txt", "read";
+    permission com.apress.chapter6.jaas.consolemenu.CustomResourcePermission "sample-resource";
+};
