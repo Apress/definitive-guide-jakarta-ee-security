@@ -13,7 +13,7 @@ Run the authorization example
 ```
 java -Djava.security.manager -Djava.security.policy=src/main/resources/jaas.policy \
       -Djava.security.auth.login.config=src/main/resources/jaas.config \
-      -classpath target/jaas-1.0.0-SNAPSHOT.jar com.apress.chapter6.jaas.JaasAuthorization
+      -classpath target/jaas-1.0.0-SNAPSHOT.jar com.apress.chapter6.jaas.SimpleJaasAuthorization
 ```
 
 Run the console menu authorization example
