@@ -1,12 +1,14 @@
 package com.apress.chapter6.digital.signatures;
 
 import java.io.InputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.KeyStore;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.cert.Certificate;
 
-public class KeystoreUtils {
+public class Utils {
 
     private static final String STORE_TYPE = "PKCS12";
     private static final char[] PASSWORD = "changeit".toCharArray();
@@ -31,7 +33,16 @@ public class KeystoreUtils {
         return certificate.getPublicKey();
     }
 
-    private static InputStream getResourceAsStream(String resource) {
-        return KeystoreUtils.class.getClassLoader().getResourceAsStream(resource);
+    public static InputStream getResourceAsStream(String resource) {
+        return Utils.class.getClassLoader().getResourceAsStream(resource);
+    }
+
+    public static Path getTargetDirPath (String digsig) {
+        return Paths.get(Utils.class
+                .getProtectionDomain()
+                .getCodeSource()
+                .getLocation()
+                .getFile() +
+                digsig);
     }
 }
