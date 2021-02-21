@@ -1,4 +1,4 @@
-package com.apress.chapter6.jce.providers.bundled;
+package com.apress.chapter6.jce.providers.bundled.aes;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
@@ -37,7 +37,7 @@ public class SimpleCTRExample {
         IvParameterSpec ivSpec = new IvParameterSpec(iv);
         Cipher cipher = Cipher.getInstance("AES/CTR/NoPadding");
 
-        System.out.println("Plain: " + Base64.getEncoder().encodeToString(originalMessageBytes));
+        System.out.println("Original: " + Base64.getEncoder().encodeToString(originalMessageBytes));
 
         // encryption
         cipher.init(Cipher.ENCRYPT_MODE, keySpec, ivSpec);

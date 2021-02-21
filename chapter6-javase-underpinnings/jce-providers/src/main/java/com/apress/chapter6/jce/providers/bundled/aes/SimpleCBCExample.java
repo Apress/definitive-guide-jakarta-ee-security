@@ -1,4 +1,4 @@
-package com.apress.chapter6.jce.providers.bundled;
+package com.apress.chapter6.jce.providers.bundled.aes;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;

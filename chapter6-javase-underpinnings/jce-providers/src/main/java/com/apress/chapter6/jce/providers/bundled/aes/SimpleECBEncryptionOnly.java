@@ -1,11 +1,15 @@
-package com.apress.chapter6.jce.providers.bundled;
+package com.apress.chapter6.jce.providers.bundled.aes;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
 
-public class SimpleAESEncryptionDecryption {
+/**
+ * Simple AES encryption in ECB mode.
+ */
+public class SimpleECBEncryptionOnly {
 
     public static void main(String[] args)
             throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
@@ -20,11 +24,6 @@ public class SimpleAESEncryptionDecryption {
 
         byte[] encryptedMessageBytes = cipher.doFinal(originalMessage.getBytes());
 
-        cipher.init(Cipher.DECRYPT_MODE, secretKey);
-        byte[] decryptedMessageBytes = cipher.doFinal(encryptedMessageBytes);
-
-        System.out.println("Original and decrypted values " +
-                (originalMessage.equals(new String(decryptedMessageBytes)) ? "" : "do not ") +
-                "match");
+        System.out.println("Encrypted text: " + Base64.getEncoder().encodeToString(encryptedMessageBytes));
     }
 }

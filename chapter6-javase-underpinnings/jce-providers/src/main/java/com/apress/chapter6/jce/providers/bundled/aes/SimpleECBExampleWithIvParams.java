@@ -1,4 +1,4 @@
-package com.apress.chapter6.jce.providers.bundled;
+package com.apress.chapter6.jce.providers.bundled.aes;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
@@ -7,7 +7,7 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
-public class SimpleAESEncryptionDecryptionIvParams {
+public class SimpleECBExampleWithIvParams {
 
     public static void main(String[] args)
             throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException,
