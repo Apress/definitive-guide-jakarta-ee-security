@@ -1,4 +1,4 @@
-package com.apress.chapter6.jce.providers.bundled.des;
+package com.apress.chapter6.jce.providers.bundled.symmetric.des;
 
 import javax.crypto.*;
 import java.security.InvalidAlgorithmParameterException;
