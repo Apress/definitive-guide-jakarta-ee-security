@@ -5,9 +5,9 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import java.security.Security;
 
 /**
- * This example demonstrates how to confirm whether the BouncyCastle provider is installed.
+ * This example demonstrates how to install the BouncyCastle provider at runtime.
  */
-public class SimpleJceProviderTest {
+public class RegisterBCProviderAtRuntime {
 
     public static void main(String[] args) {
         Security.addProvider(new BouncyCastleProvider());
