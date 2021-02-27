@@ -24,6 +24,7 @@ public class SimpleECBEncryptionOnly {
 
         byte[] encryptedMessageBytes = cipher.doFinal(originalMessage.getBytes());
 
+        System.out.println("Original text: " + originalMessage);
         System.out.println("Encrypted text: " + Base64.getEncoder().encodeToString(encryptedMessageBytes));
     }
 }

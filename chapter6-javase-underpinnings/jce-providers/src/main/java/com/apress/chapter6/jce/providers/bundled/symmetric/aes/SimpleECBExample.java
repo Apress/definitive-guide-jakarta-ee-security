@@ -4,6 +4,7 @@ import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
 
 /**
  * Simple AES encryption example in ECB mode.
@@ -26,6 +27,9 @@ public class SimpleECBExample {
         cipher.init(Cipher.DECRYPT_MODE, secretKey);
         byte[] decryptedMessageBytes = cipher.doFinal(encryptedMessageBytes);
 
+        System.out.println("Original: " + Base64.getEncoder().encodeToString(originalMessage.getBytes()));
+        System.out.println("Cipher: " + Base64.getEncoder().encodeToString(encryptedMessageBytes));
+        System.out.println("Decrypted: " + Base64.getEncoder().encodeToString(decryptedMessageBytes));
         System.out.println("Original and decrypted values " +
                 (originalMessage.equals(new String(decryptedMessageBytes)) ? "" : "do not ") +
                 "match");
