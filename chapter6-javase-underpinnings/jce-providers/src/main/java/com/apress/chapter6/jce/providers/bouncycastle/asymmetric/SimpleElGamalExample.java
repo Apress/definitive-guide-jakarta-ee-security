@@ -18,7 +18,7 @@ public class SimpleElGamalExample {
         String plainText = "This is a secret message";
         byte[] plainTextBytes = plainText.getBytes();
 
-        // generate random keys
+        // Side A generates a key pair and shares their public key with Side B. Side A's private key is kept secret.
         KeyPairGenerator generator = KeyPairGenerator.getInstance("ElGamal", "BC");
         generator.initialize(256);
         KeyPair keyPair = generator.generateKeyPair();
@@ -27,13 +27,13 @@ public class SimpleElGamalExample {
 
         System.out.println("Plain: " + Base64.getEncoder().encodeToString(plainTextBytes));
         
-        // encryption
+        // Side B encrypts a message under Side A's public key.
         Cipher cipher = Cipher.getInstance("ElGamal/None/NoPadding", "BC");
         cipher.init(Cipher.ENCRYPT_MODE, publicKey);
         byte[] cipherText = cipher.doFinal(plainTextBytes);
         System.out.println("Cipher: " + Base64.getEncoder().encodeToString(cipherText));
         
-        // decryption
+        // Side A decrypts the ciphertext with their private key
         cipher.init(Cipher.DECRYPT_MODE, privateKey);
         byte[] decryptedMessageBytes = cipher.doFinal(cipherText);
         System.out.println("Decrypted: " + Base64.getEncoder().encodeToString(decryptedMessageBytes));
