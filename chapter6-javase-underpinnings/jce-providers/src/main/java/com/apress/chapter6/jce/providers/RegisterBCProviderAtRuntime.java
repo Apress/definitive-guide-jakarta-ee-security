@@ -11,7 +11,7 @@ public class RegisterBCProviderAtRuntime {
 
     public static void main(String[] args) {
         Security.addProvider(new BouncyCastleProvider());
-        String providerName = "BC";
+        String providerName = "BC"; // the default name that BouncyCastle provider is registered with
 
         if (Security.getProvider(providerName) == null)
             System.out.println(providerName + " provider not installed");
