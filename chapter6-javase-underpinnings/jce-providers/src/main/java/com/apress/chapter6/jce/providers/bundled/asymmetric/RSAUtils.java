@@ -20,17 +20,17 @@ public class RSAUtils {
     public static void main(String[] args)
             throws IOException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidKeyException, SignatureException {
 
-        PublicKey publicKey = RSAUtils.getPublicKey("id_rsa.pub");
-        PrivateKey privateKey = RSAUtils.getPrivateKey("id_rsa.key");
+        PublicKey publicKey = getPublicKey("id_rsa.pub");
+        PrivateKey privateKey = getPrivateKey("id_rsa.key");
 
         System.out.println(publicKey);
         System.out.println(privateKey);
 
         byte[] messageBytes = "This is a test message".getBytes();
-        byte[] digitalSignature = RSAUtils.sign(messageBytes, privateKey);
+        byte[] digitalSignature = sign(messageBytes, privateKey);
         System.out.println("\nDigital signature: " + Base64.getEncoder().encodeToString(digitalSignature));
 
-        boolean isVerified = RSAUtils.verifySignature(messageBytes, publicKey, digitalSignature);
+        boolean isVerified = verifySignature(messageBytes, publicKey, digitalSignature);
         System.out.println("Signature " + (isVerified ? "verified" : "not verified"));
     }
 
