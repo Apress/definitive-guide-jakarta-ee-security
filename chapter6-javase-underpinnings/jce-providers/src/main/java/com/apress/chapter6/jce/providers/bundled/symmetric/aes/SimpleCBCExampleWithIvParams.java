@@ -7,7 +7,7 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
-public class SimpleECBExampleWithIvParams {
+public class SimpleCBCExampleWithIvParams {
 
     public static void main(String[] args)
             throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException,
