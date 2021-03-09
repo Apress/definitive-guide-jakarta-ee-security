@@ -52,8 +52,9 @@ public class SimpleAESExampleExplained {
          * PKCS#7 is used in different places like in S/MIME.
          * PKCS#5 padding is defined for 8-byte block sizes, while PKCS#7 padding would work for any block size from 1 to 255 bytes.
          *
-         * The bundled JCE provider supports only PKCS#5 padding.
-         * That is, for PKCS#7 padding you should consider using an external JCE provider like BouncyCastle.
+         * The bundled JCE provider's standard padding name is PKCS5Padding, not PKCS7Padding.
+         * Java is actually performing PKCS#7 padding, but in the JCA specification, PKCS5Padding is the name given.
+         * That is, for PKCS#5 padding you should consider using an external JCE provider like BouncyCastle.
          */
         Cipher encryptionCipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         // Specify the mode explicitly or most JCE providers will default to ECB.
