@@ -12,6 +12,8 @@ import java.util.Base64;
 
 /**
  * A simple example to generate and verify a digital signature using RSA.
+ * This example uses the key pair that resides on the resources folder,
+ * which was generated with RSAUtils.java
  */
 public class RSAUtils {
 

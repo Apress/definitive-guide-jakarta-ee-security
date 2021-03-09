@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.security.*;
 import java.util.Base64;
 
+/**
+ * A simple example that generates an asymmetric key pair.
+ * The generated keys are saved in the resources folder.
+ */
 public class RSAKeyPairGenerator {
 
     private static final String PATH = "chapter6-javase-underpinnings/jce-providers/src/main/resources/rsa-keys/";
