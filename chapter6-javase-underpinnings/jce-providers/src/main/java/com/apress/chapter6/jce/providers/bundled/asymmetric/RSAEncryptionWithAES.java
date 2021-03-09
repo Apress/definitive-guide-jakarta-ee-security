@@ -11,6 +11,13 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  * Simple example that demonstrates a hybrid encryption approach using RSA in combination with AES.
+ *
+ * Steps
+ * 1. Encrypt the large message using AES
+ * 2. Encrypt the AES key is using the RSA
+ * 3. Encrypted AES message and RSA encrypted AES key are sent across.
+ * 4. Decrypt AES key is using RSA public key
+ * 5. Decrypt message is with AES key
  */
 public class RSAEncryptionWithAES {
 
@@ -29,7 +36,7 @@ public class RSAEncryptionWithAES {
         // Encrypt AES key with RSA Private Key
         String encryptedAESKeyString = encryptAESKey(secretAESKeyString, privateKey);
 
-        // Now let's see what happens on the receiver side.
+        /** Now let's see what happens on the receiver side. */
 
         // First decrypt the AES key with RSA public key
         String decryptedAESKeyString = decryptAESKey(encryptedAESKeyString, publicKey);
