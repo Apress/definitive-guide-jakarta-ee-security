@@ -11,7 +11,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
 /**
- * Simple AES encryption example in CTR mode with PKCS5Padding.
+ * Simple AES encryption example in CTR mode with NoPadding.
  */
 public class SimpleCTRExample {
 
@@ -25,7 +25,7 @@ public class SimpleCTRExample {
         SecretKey secretKey = new SecretKeySpec(encryptionKeyBytes, "AES");
         IvParameterSpec ivSpec = new IvParameterSpec(new byte[16]);
 
-        Cipher cipher = Cipher.getInstance("AES/CTR/PKCS5Padding", new BouncyCastleProvider());
+        Cipher cipher = Cipher.getInstance("AES/CTR/NoPadding", new BouncyCastleProvider());
         cipher.init(Cipher.ENCRYPT_MODE, secretKey, ivSpec);
 
         byte[] encryptedMessageBytes = cipher.doFinal(originalMessage.getBytes());
