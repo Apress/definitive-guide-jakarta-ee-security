@@ -29,7 +29,10 @@ public class SimpleRSAExample {
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
 
         // encryption
-        Cipher cipher = Cipher.getInstance("RSA/ECB/OAEPWithSHA-256AndMGF1Padding");
+        Cipher cipher = Cipher.getInstance("RSA/ECB/OAEPWithSHA-256AndMGF1Padding"); // this is a misnomer in JavaSE that has probably been copied
+        // from the block cipher modes in the old Java versions. It does not allow multiple blocks to be encrypted,
+        // which is what you would expect from ECB mode. That is, this is completely identical to "OAEPWithSHA-256AndMGF1Padding" -
+        // but that algorithm is generally not provided with Java SE.
         cipher.init(Cipher.ENCRYPT_MODE, keyPair.getPublic());
 
         System.out.println("Plain: " + Base64.getEncoder().encodeToString(originalMessageBytes));
