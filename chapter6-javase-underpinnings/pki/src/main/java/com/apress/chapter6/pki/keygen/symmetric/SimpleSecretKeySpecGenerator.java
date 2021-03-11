@@ -18,6 +18,4 @@ public class SimpleSecretKeySpecGenerator {
 
         System.out.println("Generated key value: " + Base64.getEncoder().encodeToString(key.getEncoded()));
     }
-
-
 }
