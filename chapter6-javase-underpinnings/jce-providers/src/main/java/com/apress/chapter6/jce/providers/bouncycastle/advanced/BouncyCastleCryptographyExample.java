@@ -27,16 +27,32 @@ import java.security.cert.X509Certificate;
 import java.util.*;
 
 /**
- * Full cryptography example using Bouncy Castle capabilities.
- * This example demonstrates encryption, decryption, signature creation and verification using Bouncy Castle's light-weight API.
+ * Full cryptography example using Bouncy Castle's light-weight API.
+ * This example demonstrates encryption, decryption, signature creation and verification.
+ *
+ * Steps for encryption
+ * 1. Load private and public key from file
+ * 2. Sender encrypts a message using the recipient's certificate (public key)
+ * 3. Recipient decrypts the message using the associate private key
+ *
+ * Steps for signature
+ * 1. Create a digital signature using a signing certificate and a private key
+ * 2. Verify the signature's bytes by cross-checking the certificate holders with the help of ASN.1 standard
+ *
+ * Other notes
+ * 1. This example uses the key pair generated in digital signatures chapter/module
+ * 2. sender-certificate.cer is a digital certificate that uses the X.509 standard
+ * 3. senderkeystore.p12 is a password-protected PKCS12 keystore that contains a certificate chain and a private key
+ * 4. We'll use the keystore path to extract the private key
  */
 public class BouncyCastleCryptographyExample {
 
     private static final String PUBLIC_KEY_PATH = "chapter6-javase-underpinnings/digital-signatures/src/main/resources/sender-certificate.cer";
-    // the keystore file contains the certificate chain and the private key. we'll use the keystore path to extract the private key
     private static final String KEYSTORE_PATH = "chapter6-javase-underpinnings/digital-signatures/src/main/resources/senderkeystore.p12";
     private static final char[] KEYSTORE_PASSWORD = "changeit".toCharArray();
     private static final char[] PRIVATE_KEY_PASSWORD = "changeit".toCharArray();
+    // a PKCS12 keystore contains a set of private keys and each private key can have a specific password
+    // therefore we need a global password to access the keystore, and a specific one to retrieve the private key.
     
     public static void main(String[] args) throws Exception{
 
@@ -81,8 +97,12 @@ public class BouncyCastleCryptographyExample {
     public static byte[] decrypt(byte[] cipherText, PrivateKey privateKey) throws CMSException {
 
         CMSEnvelopedData cmsEnvelopedData = new CMSEnvelopedData(cipherText);
+
+        // retrieve the intended recipients of the message
         Collection<RecipientInformation> recipients = cmsEnvelopedData.getRecipientInfos().getRecipients();
         KeyTransRecipientInformation recipientInfo = (KeyTransRecipientInformation) recipients.iterator().next();
+        // recipientInfo now contains the decrypted message, but we need the corresponding recipient's key to retrieve it
+
         JceKeyTransRecipient recipient = new JceKeyTransEnvelopedRecipient(privateKey);
 
         return recipientInfo.getContent(recipient);
@@ -97,12 +117,18 @@ public class BouncyCastleCryptographyExample {
         Store jcaCertStore = new JcaCertStore(certificates);
 
         CMSSignedDataGenerator cmsSignedDataGenerator = new CMSSignedDataGenerator();
+
         ContentSigner contentSigner = new JcaContentSignerBuilder("SHA256withRSA").build(privateKey);
         cmsSignedDataGenerator.addSignerInfoGenerator(
                 new JcaSignerInfoGeneratorBuilder(
                         new JcaDigestCalculatorProviderBuilder().setProvider("BC").build()
-                ).build(contentSigner, signingCertificate));
+                ).build(contentSigner, signingCertificate)); // use contentSigner instance along with the signing certificate
+                                                             // to create a SignerInfoGenerator object.
+
         cmsSignedDataGenerator.addCertificates(jcaCertStore);
+        // At this point, the cmsSignedDataGenerator instance contains a SignerInfoGenerator and the signing certificate
+
+        // create a CMS signed-data object, which also carries a CMS signature.
         CMSSignedData cmsSignedData = cmsSignedDataGenerator.generate(cmsTypedData, true);
 
         return cmsSignedData.getEncoded();
@@ -122,7 +148,10 @@ public class BouncyCastleCryptographyExample {
         Collection<X509CertificateHolder> certificateHolders = certificates.getMatches(signerInformation.getSID());
         Iterator<X509CertificateHolder> certificateHolderIterator = certificateHolders.iterator();
         X509CertificateHolder certificateHolder = certificateHolderIterator.next();
+        // here we verified only one signer, but it is recommended to iterate over the entire collection of signers
+        // returned by the getSigners() method and check each one separately.
 
+        // create a SignerInformationVerifier object (using its build() method) and pass it to the verify() method for verification
         return signerInformation.verify(new JcaSimpleSignerInfoVerifierBuilder().build(certificateHolder));
     }
 }
