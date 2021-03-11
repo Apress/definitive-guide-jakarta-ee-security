@@ -1,7 +1,6 @@
 package com.apress.chapter6.pki.keygen.symmetric;
 
 import javax.crypto.KeyGenerator;
-import javax.crypto.spec.SecretKeySpec;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
