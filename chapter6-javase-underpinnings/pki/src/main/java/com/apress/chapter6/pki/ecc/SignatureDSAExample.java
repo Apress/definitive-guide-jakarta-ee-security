@@ -1,4 +1,4 @@
-package com.apress.chapter6.jce.providers.bundled.signature;
+package com.apress.chapter6.pki.ecc;
 
 import java.security.*;
 
@@ -10,7 +10,7 @@ import java.security.*;
  * For the former, a key pair is needed so anyone can encrypt, whereas for the latter, a key is needed so anyone can verify.
  * Another difference is that RSA uses a private key for decryption, whereas DSA utilizes it to create a signature.
  */
-public class SimpleDSAExample {
+public class SignatureDSAExample {
 
     public static void main(String[] args) throws Exception {
 

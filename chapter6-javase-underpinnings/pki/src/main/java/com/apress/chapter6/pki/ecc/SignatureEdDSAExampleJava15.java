@@ -1,4 +1,4 @@
-package com.apress.chapter6.jce.providers.bundled.signature;
+package com.apress.chapter6.pki.ecc;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -6,9 +6,9 @@ import java.security.Signature;
 import java.util.Base64;
 
 /**
- * Java 15 example on EdDSA algorithm
+ * Java 15 signature example on EdDSA algorithm
  */
-public class EdDSAExampleJava15 {
+public class SignatureEdDSAExampleJava15 {
 
     public static void main(String[] args) throws Exception{
 
