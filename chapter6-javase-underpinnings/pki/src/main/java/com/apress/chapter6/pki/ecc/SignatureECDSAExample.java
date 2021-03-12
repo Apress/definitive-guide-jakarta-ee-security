@@ -1,16 +1,15 @@
-package com.apress.chapter6.jce.providers.bouncycastle.signature;
+package com.apress.chapter6.pki.ecc;
 
-import org.bouncycastle.jce.ECNamedCurveTable;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.bouncycastle.jce.spec.ECParameterSpec;
 
 import java.security.*;
+import java.security.spec.ECGenParameterSpec;
 
 /**
  * Simple example that demonstrates signature creation and verification using ECDSA.
- * Here, all supportive classes for curve configuration come from BC
+ * ECDSA is only provided by BC, the rest of supportive classes (such as ECGenParameterSpec) come with JCE.
  */
-public class SimpleECDSAExampleBC {
+public class SignatureECDSAExample {
 
     public static void main(String[] args) throws Exception {
 
@@ -18,8 +17,8 @@ public class SimpleECDSAExampleBC {
         byte[] messageBytes = "This is a secret message".getBytes();
 
         // generate key pair
-        ECParameterSpec ecSpec = ECNamedCurveTable.getParameterSpec("B-571"); // here we're using BC's lightweight API
-        KeyPairGenerator keygen = KeyPairGenerator.getInstance("ECDSA", "BC");
+        KeyPairGenerator keygen = KeyPairGenerator.getInstance("ECDSA");
+        ECGenParameterSpec ecSpec = new ECGenParameterSpec("secp128r1"); // here we're using JCE's crypto API
         keygen.initialize(ecSpec, new SecureRandom());
         KeyPair keyPair = keygen.generateKeyPair();
 

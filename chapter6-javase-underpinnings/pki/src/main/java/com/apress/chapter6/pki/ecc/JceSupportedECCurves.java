@@ -1,4 +1,4 @@
-package com.apress.chapter6.jce.providers.bouncycastle.signature;
+package com.apress.chapter6.pki.ecc;
 
 import java.security.Security;
 

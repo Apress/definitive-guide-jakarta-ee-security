@@ -1,4 +1,4 @@
-package com.apress.chapter6.pki.keyagreement;
+package com.apress.chapter6.pki.ecc;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
@@ -10,7 +10,7 @@ import java.util.Base64;
 /**
  * Key agreement example using an Elliptic Curve that comes with the bundled JCE provider.
  */
-public class NamedCurveExample {
+public class KeyAgreementNamedCurveExample {
 
     public static void main(String[] args) throws Exception {
 

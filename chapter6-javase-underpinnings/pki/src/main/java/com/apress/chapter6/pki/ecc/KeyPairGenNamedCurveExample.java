@@ -1,4 +1,4 @@
-package com.apress.chapter6.pki.keygen;
+package com.apress.chapter6.pki.ecc;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
@@ -11,7 +11,7 @@ import java.security.spec.ECGenParameterSpec;
 /**
  * Key generation example using an Elliptic Curve
  */
-public class NamedCurveExample {
+public class KeyPairGenNamedCurveExample {
 
     public static void main(String[] args) throws Exception {
 
