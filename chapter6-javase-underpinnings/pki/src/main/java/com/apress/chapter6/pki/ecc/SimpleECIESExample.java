@@ -17,7 +17,7 @@ public class SimpleECIESExample {
         String message = "This is a long message";
 
         KeyPairGenerator ecKeyGen = KeyPairGenerator.getInstance("EC", "BC");
-        ecKeyGen.initialize(new ECGenParameterSpec("brainpoolP384r1"));
+        ecKeyGen.initialize(new ECGenParameterSpec("secp256r1"));
         KeyPair ecKeyPair = ecKeyGen.generateKeyPair();
 
         Cipher iesCipher = Cipher.getInstance("ECIESwithAES-CBC");
