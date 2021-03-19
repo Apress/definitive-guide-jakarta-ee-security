@@ -1,6 +1,4 @@
-package com.apress.chapter6.jce.providers.bouncycastle.asymmetric;
-
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
+package com.apress.chapter6.pki.keyagreement;
 
 import javax.crypto.KeyAgreement;
 import javax.crypto.spec.DHParameterSpec;
@@ -9,9 +7,9 @@ import java.security.*;
 import java.util.Base64;
 
 /**
- * Simple example demonstrating a two party key agreement using Diffie-Hellman and Bouncy Castle.
+ * Simple example demonstrating a two party key agreement using Diffie-Hellman.
  */
-public class BasicDHExample {
+public class SimpleDHExample {
 
     private static final BigInteger g512 = new BigInteger("153d5d6172adb43045b68ae8e1de1070b6137005686d29d3d73a7"
             + "749199681ee5b212c9b96bfdcfa5b20cd5e3fd2044895d609cf9b"
@@ -22,27 +20,25 @@ public class BasicDHExample {
             + "f0573bf047a3aca98cdf3b", 16);
 
     public static void main(String[] args) throws Exception {
-        Security.addProvider(new BouncyCastleProvider());
 
         DHParameterSpec dhParams = new DHParameterSpec(p512, g512);
-        KeyPairGenerator keygen = KeyPairGenerator.getInstance("DH", "BC");
-
+        KeyPairGenerator keygen = KeyPairGenerator.getInstance("DH");
         keygen.initialize(dhParams, new SecureRandom());
 
-        KeyAgreement aKeyAgree = KeyAgreement.getInstance("DH", "BC");
+        KeyAgreement aKeyAgreement = KeyAgreement.getInstance("DH");
         KeyPair aPair = keygen.generateKeyPair();
-        KeyAgreement bKeyAgree = KeyAgreement.getInstance("DH", "BC");
+        KeyAgreement bKeyAgreement = KeyAgreement.getInstance("DH");
         KeyPair bPair = keygen.generateKeyPair();
 
-        aKeyAgree.init(aPair.getPrivate());
-        bKeyAgree.init(bPair.getPrivate());
+        aKeyAgreement.init(aPair.getPrivate());
+        bKeyAgreement.init(bPair.getPrivate());
 
-        aKeyAgree.doPhase(bPair.getPublic(), true);
-        bKeyAgree.doPhase(aPair.getPublic(), true);
+        aKeyAgreement.doPhase(bPair.getPublic(), true);
+        bKeyAgreement.doPhase(aPair.getPublic(), true);
 
-        MessageDigest hash = MessageDigest.getInstance("SHA1", "BC");
-        byte[] aShared = hash.digest(aKeyAgree.generateSecret());
-        byte[] bShared = hash.digest(bKeyAgree.generateSecret());
+        MessageDigest hash = MessageDigest.getInstance("SHA1");
+        byte[] aShared = hash.digest(aKeyAgreement.generateSecret());
+        byte[] bShared = hash.digest(bKeyAgreement.generateSecret());
 
         System.out.println(Base64.getEncoder().encodeToString(aShared));
         System.out.println(Base64.getEncoder().encodeToString(bShared));
