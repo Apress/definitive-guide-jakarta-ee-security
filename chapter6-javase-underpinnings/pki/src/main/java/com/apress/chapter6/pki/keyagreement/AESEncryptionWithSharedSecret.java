@@ -3,6 +3,7 @@ package com.apress.chapter6.pki.keyagreement;
 import org.bouncycastle.jce.ECNamedCurveTable;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.jce.spec.ECNamedCurveParameterSpec;
+import org.bouncycastle.util.encoders.Hex;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
@@ -17,6 +18,9 @@ import java.security.*;
  * 2. Two parties generate two AES secret keys
  * 3. Party A encrypts using AES/GCM/NoPadding and its own secret
  * 4. Party B decrypts using AES/GCM/NoPadding and its own secret
+ *
+ * Notes:
+ * 1. We're here using BC's Hex class to convert a byte array to hex and vice-versa
  */
 public class AESEncryptionWithSharedSecret {
 
@@ -73,12 +77,12 @@ public class AESEncryptionWithSharedSecret {
         int encryptLength = cipher.update(plainTextBytes, 0, plainTextBytes.length, ciphertext, 0);
         encryptLength += cipher.doFinal(ciphertext, encryptLength);
 
-        return bytesToHex(ciphertext);
+        return new String(Hex.encode(ciphertext));
     }
 
     public static String decryptString(String ciphertext, SecretKey key) throws Exception {
 
-        byte[] cipherTextBytes = hexToBytes(ciphertext);
+        byte[] cipherTextBytes = Hex.decode(ciphertext);
         IvParameterSpec ivSpec = new IvParameterSpec(iv);
         Key decryptionKey = new SecretKeySpec(key.getEncoded(), key.getAlgorithm());
 
@@ -89,32 +93,5 @@ public class AESEncryptionWithSharedSecret {
         decryptLength += cipher.doFinal(plainText, decryptLength);
 
         return new String(plainText);
-    }
-
-    public static String bytesToHex(byte[] data, int length) {
-        String digits = "0123456789ABCDEF";
-        StringBuilder builder = new StringBuilder();
-
-        for (int i = 0; i != length; i++) {
-            int v = data[i] & 0xff;
-            builder.append(digits.charAt(v >> 4));
-            builder.append(digits.charAt(v & 0xf));
-        }
-
-        return builder.toString();
-    }
-
-    public static String bytesToHex(byte[] data) {
-        return bytesToHex(data, data.length);
-    }
-
-    public static byte[] hexToBytes(String string) {
-        int length = string.length();
-        byte[] data = new byte[length / 2];
-        for (int i = 0; i < length; i += 2) {
-            data[i / 2] = (byte) ((Character.digit(string.charAt(i), 16) << 4) + Character
-                    .digit(string.charAt(i + 1), 16));
-        }
-        return data;
     }
 }
