@@ -5,7 +5,7 @@ import java.security.Security;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class ListAvailableMDs {
+public class ListAvailableHashFunctions {
 
     public static void main(String[] args) {
 
