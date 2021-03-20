@@ -77,7 +77,7 @@ public class AESEncryptionWithSharedSecret {
         int encryptLength = cipher.update(plainTextBytes, 0, plainTextBytes.length, ciphertext, 0);
         encryptLength += cipher.doFinal(ciphertext, encryptLength);
 
-        return new String(Hex.encode(ciphertext));
+        return Hex.toHexString(ciphertext);
     }
 
     public static String decryptString(String ciphertext, SecretKey key) throws Exception {
