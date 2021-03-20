@@ -16,7 +16,7 @@ import java.util.Base64;
 /**
  * Simple AES encryption in CTR mode demonstrating the use of a block cipher (IDEA in this case) to compute a MAC.
  */
-public class BlockCipherMacExample {
+public class AESEncryptionWithBlockCipherAsMac {
 
     public static void main(String[] args) throws Exception {
 

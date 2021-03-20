@@ -16,7 +16,7 @@ import java.util.Base64;
 /**
  * Simple AES encryption in CTR mode demonstrating the use of a hash function (HmacSHA256 in this case) to compute a MAC.
  */
-public class HashFunctionMacExample {
+public class AESEncryptionWithHashFunctionAsMac {
 
     public static void main(String[] args) throws Exception {
 
