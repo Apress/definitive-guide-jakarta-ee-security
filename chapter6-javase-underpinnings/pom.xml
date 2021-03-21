@@ -36,5 +36,6 @@
         <module>jaas</module>
         <module>digital-signatures</module>
         <module>jce-providers</module>
+        <module>tls</module>
     </modules>
 </project>
