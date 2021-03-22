@@ -6,15 +6,15 @@ import javax.crypto.SecretKey;
 import java.util.Base64;
 
 /**
- * MAC using HmacSHA256 algorithm and a block cipher (DES in this case) for key generation
+ * MAC using HmacSHA256 algorithm and a block cipher (AES in this case) for key generation
  */
-public class SimpleHmac256ExampleWithDESKey {
+public class SimpleHmac256ExampleWithAESKey {
 
     public static void main(String[] args) throws Exception {
 
         String message = "This is a secret message";
-        KeyGenerator keygen = KeyGenerator.getInstance("DES");
-        keygen.init(56);
+        KeyGenerator keygen = KeyGenerator.getInstance("AES");
+        keygen.init(256);
         SecretKey hmacKey = keygen.generateKey();
 
         Mac mac = Mac.getInstance("HmacSHA256");
