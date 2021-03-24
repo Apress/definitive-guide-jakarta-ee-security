@@ -36,7 +36,7 @@ public class SimpleTLS13Example {
             out.flush();
 
             if (out.checkError())
-                System.out.println("SSLSocketClient:  java.io.PrintWriter error");
+                System.out.println("SimpleTLS13Example: java.io.PrintWriter error");
 
             // read response
             in = new BufferedReader(new InputStreamReader(sslSocket.getInputStream()));
