@@ -11,6 +11,6 @@
     </parent>
 
     <artifactId>jaas</artifactId>
-    <name>Java Authenticaton and Authorizarion Service</name>
+    <name>Java Authenticaton and Authorizarion Service (JAAS)</name>
 
 </project>
