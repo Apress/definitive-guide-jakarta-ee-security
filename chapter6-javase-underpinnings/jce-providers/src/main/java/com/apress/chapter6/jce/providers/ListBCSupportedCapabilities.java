@@ -4,7 +4,6 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 import java.security.Provider;
 import java.security.Security;
-import java.util.Iterator;
 
 /**
  * This example lists the supported capabilities for
