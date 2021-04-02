@@ -15,7 +15,7 @@
     <name>Chapter 6 - JavaSE Underpinnings</name>
 
     <properties>
-        <bouncy.castle.version>1.58</bouncy.castle.version>
+        <bouncy.castle.version>1.68</bouncy.castle.version>
     </properties>
 
     <dependencies>
@@ -37,5 +37,6 @@
         <module>digital-signatures</module>
         <module>jce-providers</module>
         <module>tls</module>
+        <module>pki</module>
     </modules>
 </project>
