@@ -24,7 +24,7 @@ import java.util.Date;
 /**
  * Generate self-signed certificate by utilizing BC's capabilities
  */
-public class GenerateX509v3CertificateSelfSigned {
+public class GenerateX509v3CertificateUp {
 
     private static final String CERTIFICATE_PATH = "chapter6-javase-underpinnings/digital-signatures/src/main/resources/";
 
@@ -71,7 +71,7 @@ public class GenerateX509v3CertificateSelfSigned {
         System.out.println("Certificate is valid, storing in file...");
 
         // store in file, encoded in binary DER format
-        FileOutputStream fos = new FileOutputStream(CERTIFICATE_PATH + "certgenbc.der");
+        FileOutputStream fos = new FileOutputStream(CERTIFICATE_PATH + "certgenup.der");
         fos.write(x509Certificate.getEncoded());
         fos.close();
         System.out.println("Certificate is now stored in file");
