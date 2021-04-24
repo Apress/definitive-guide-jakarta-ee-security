@@ -9,13 +9,13 @@ public class ListAvailableHashFunctions {
 
     public static void main(String[] args) {
 
-        Set<String> algs = new TreeSet<>();
+        Set<String> messageDigests = new TreeSet<>();
         for (Provider provider : Security.getProviders()) {
             provider.getServices().stream()
                     .filter(s -> "MessageDigest".equals(s.getType()))
                     .map(Provider.Service::getAlgorithm)
-                    .forEach(algs::add);
+                    .forEach(messageDigests::add);
         }
-        algs.forEach(System.out::println);
+        messageDigests.forEach(System.out::println);
     }
 }

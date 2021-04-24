@@ -9,13 +9,13 @@ public class ListAvailableMACs {
 
     public static void main(String[] args) {
 
-        Set<String> algs = new TreeSet<>();
+        Set<String> macs = new TreeSet<>();
         for (Provider provider : Security.getProviders()) {
             provider.getServices().stream()
                     .filter(s -> "Mac".equals(s.getType()))
                     .map(Provider.Service::getAlgorithm)
-                    .forEach(algs::add);
+                    .forEach(macs::add);
         }
-        algs.forEach(System.out::println);
+        macs.forEach(System.out::println);
     }
 }
