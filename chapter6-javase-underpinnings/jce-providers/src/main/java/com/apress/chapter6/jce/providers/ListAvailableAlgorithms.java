@@ -5,8 +5,7 @@ import java.security.Security;
 import java.util.*;
 
 /**
- * Prints the currently available algorithms for
- * Signatures, Ciphers, Key Agreements, MACs, and Message Digests.
+ * Prints the currently available algorithms for Signatures, Ciphers, Key Agreements, MACs, and Message Digests.
  */
 public class ListAvailableAlgorithms {
 
