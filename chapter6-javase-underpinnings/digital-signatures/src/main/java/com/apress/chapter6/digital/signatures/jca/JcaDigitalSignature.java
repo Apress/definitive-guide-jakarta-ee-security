@@ -23,6 +23,6 @@ public class JcaDigitalSignature {
 
         byte[] digitalSignature = signature.sign();
 
-        Files.write(Utils.getTargetDirPath("/digital-signature.pfx"), digitalSignature);
+        Files.write(Utils.getTargetDirPath("/digital-signature"), digitalSignature);
     }
 }

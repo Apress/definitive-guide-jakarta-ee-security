@@ -26,6 +26,6 @@ public class CustomDigitalSignature {
         cipher.init(Cipher.ENCRYPT_MODE, privateKey);
         byte[] digitalSignature = cipher.doFinal(messageHash);
 
-        Files.write(Utils.getTargetDirPath("/custom-digital-signature.pfx"), digitalSignature);
+        Files.write(Utils.getTargetDirPath("/custom-digital-signature"), digitalSignature);
     }
 }

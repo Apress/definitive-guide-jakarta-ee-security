@@ -12,7 +12,7 @@ public class CustomDigitalSignatureVerification {
     public static void main(String[] args) throws Exception {
 
         PublicKey publicKey = Utils.getPublicKey();
-        byte[] encryptedMessageHash = Utils.getResourceAsStream("custom-digital-signature.pfx").readAllBytes();
+        byte[] encryptedMessageHash = Utils.getResourceAsStream("custom-digital-signature").readAllBytes();
 
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.DECRYPT_MODE, publicKey);

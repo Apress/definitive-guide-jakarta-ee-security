@@ -16,7 +16,7 @@ public class JcaDigitalSignatureVerification {
         byte[] messageBytes = Utils.getResourceAsStream("message.txt").readAllBytes();
         signature.update(messageBytes);
 
-        byte[] jcaDigitalSignature = Utils.getResourceAsStream("digital-signature.pfx").readAllBytes();
+        byte[] jcaDigitalSignature = Utils.getResourceAsStream("digital-signature").readAllBytes();
         boolean isVerified = signature.verify(jcaDigitalSignature);
         System.out.println("Signature " + (isVerified ? "verified" : "not verified"));
     }
