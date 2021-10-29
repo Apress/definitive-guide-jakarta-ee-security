@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.apress.jakartasecbook</groupId>
+        <artifactId>chapter3-jakarta-authentication</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>simple-sam</artifactId>
+    <packaging>war</packaging>
+
+    <name>Simple ServerAuthModule</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>authentication-utils</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+</project>
