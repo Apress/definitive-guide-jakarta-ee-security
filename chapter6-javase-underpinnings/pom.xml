@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -12,10 +10,19 @@
 
     <artifactId>chapter6-javase-underpinnings</artifactId>
     <packaging>pom</packaging>
+
     <name>Chapter 6 - JavaSE Underpinnings</name>
 
+    <modules>
+        <module>jaas</module>
+        <module>digital-signatures</module>
+        <module>jce-providers</module>
+        <module>pki</module>
+        <module>tls</module>
+    </modules>
+
     <properties>
-        <bouncy.castle.version>1.68</bouncy.castle.version>
+        <bouncy.castle.version>1.69</bouncy.castle.version>
     </properties>
 
     <dependencies>
@@ -31,12 +38,4 @@
             <version>${bouncy.castle.version}</version>
         </dependency>
     </dependencies>
-
-    <modules>
-        <module>jaas</module>
-        <module>digital-signatures</module>
-        <module>jce-providers</module>
-        <module>pki</module>
-        <module>tls</module>
-    </modules>
 </project>
