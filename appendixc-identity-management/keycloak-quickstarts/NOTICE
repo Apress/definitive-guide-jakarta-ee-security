@@ -1,0 +1,19 @@
+=========================================================================
+==  NOTICE file corresponding to section 4(d) of the Apache License,   ==
+==  Version 2.0                                                        ==
+=========================================================================
+
+Portions of this software were originally based on the following:
+* Keycloak Quickstarts
+  https://github.com/keycloak/keycloak-quickstarts
+  under Apache License, v2.0
+
+PackageCopyrightText: <text>
+Bruno Oliveira da Silva bruno@abstractj.org,
+Pedro Igor pigor.craveiro@gmail.com,
+Sebastien Blanc,
+Stian Thorgersen stian@redhat.com,
+Václav Muzikář vmuzikar@redhat.com,
+Werner Keil werner@catmedia.us
+and others
+</text>

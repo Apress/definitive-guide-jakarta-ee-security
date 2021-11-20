@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.apress.jakartasecbook</groupId>
@@ -10,55 +12,56 @@
 	<name>The Definitive Guide to Jakarta EE Security</name>
 	<description>Source code for the Definitive Guide to Jakarta EE Security</description>
 	<licenses>
-        <license>
+		<license>
 			<name>Freeware License</name>
 			<url>./LICENSE.txt</url>
 		</license>
 		<license>
-            <name>Apache License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-        </license>
-    </licenses>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
 
 	<developers>
 		<developer>
-            <id>arjantijms</id>
-            <name>Arjan Tijms</name>
-            <organization>Apress</organization>
-            <organizationUrl>https://www.apress.com</organizationUrl>
-            <roles>
-                <role>Author</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>keilw</id>
-            <name>Werner Keil</name>
-            <organization>Apress</organization>
-            <organizationUrl>https://www.apress.com</organizationUrl>
-            <roles>
-                <role>Author</role>
-            </roles>
-        </developer>
+			<id>arjantijms</id>
+			<name>Arjan Tijms</name>
+			<organization>Apress</organization>
+			<organizationUrl>https://www.apress.com</organizationUrl>
+			<roles>
+				<role>Author</role>
+			</roles>
+		</developer>
 		<developer>
-            <id>thodorisbais</id>
-            <name>Thodoris Bais</name>
-            <organization>Apress</organization>
-            <organizationUrl>https://www.apress.com</organizationUrl>
-            <roles>
-                <role>Author</role>
-            </roles>
-        </developer>
-    </developers>
+			<id>keilw</id>
+			<name>Werner Keil</name>
+			<organization>Apress</organization>
+			<organizationUrl>https://www.apress.com</organizationUrl>
+			<roles>
+				<role>Author</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>thodorisbais</id>
+			<name>Thodoris Bais</name>
+			<organization>Apress</organization>
+			<organizationUrl>https://www.apress.com</organizationUrl>
+			<roles>
+				<role>Author</role>
+			</roles>
+		</developer>
+	</developers>
 
 	<prerequisites>
 		<maven>3.0.0</maven>
 	</prerequisites>
 
 	<modules>
-        <module>chapter3-jakarta-authentication</module>
-        <module>chapter5-jakarta-security</module>
+		<module>chapter3-jakarta-authentication</module>
+		<module>chapter5-jakarta-security</module>
 		<module>chapter6-javase-underpinnings</module>
 		<module>chapter8-microprofile-jwt</module>
+		<module>appendixc-identity-management</module>
 	</modules>
 
 	<scm>
@@ -71,28 +74,28 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
 			<!-- Target Jakarta EE 9 server. -->
-            <dependency>
-                <groupId>jakarta.platform</groupId>
-                <artifactId>jakarta.jakartaee-api</artifactId>
-                <version>9.1.0</version>
-                <scope>provided</scope>
-            </dependency>
+			<dependency>
+				<groupId>jakarta.platform</groupId>
+				<artifactId>jakarta.jakartaee-api</artifactId>
+				<version>9.1.0</version>
+				<scope>provided</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
 		<!-- Target Jakarta EE 9 server. -->
-        <dependency>
-            <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>jakarta.platform</groupId>
+			<artifactId>jakarta.jakartaee-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -110,47 +113,47 @@
 	</dependencies>
 
 	<build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.22.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.3.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-        <plugins>
-            <!-- Sets minimal Maven version to 3.8.2 -->
-            <plugin>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <id>enforce-maven</id>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <requireMavenVersion>
-                                    <version>3.8.2</version>
-                                </requireMavenVersion>
-                            </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.22.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>2.22.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>3.3.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<!-- Sets minimal Maven version to 3.8.2 -->
+			<plugin>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>3.8.0</version>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

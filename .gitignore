@@ -42,3 +42,4 @@ log
 .DS_Store
 **/META-INF
 **/main/java/META-INF
+.access_token*
