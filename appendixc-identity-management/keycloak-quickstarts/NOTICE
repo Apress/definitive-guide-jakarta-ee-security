@@ -9,11 +9,7 @@ Portions of this software were originally based on the following:
   under Apache License, v2.0
 
 PackageCopyrightText: <text>
-Bruno Oliveira da Silva bruno@abstractj.org,
-Pedro Igor pigor.craveiro@gmail.com,
-Sebastien Blanc,
-Stian Thorgersen stian@redhat.com,
-Václav Muzikář vmuzikar@redhat.com,
+Pedro Igor psilva@redhat.com,
 Werner Keil werner@catmedia.us
 and others
 </text>
