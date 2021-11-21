@@ -202,6 +202,7 @@
 
     <modules>
         <module>app-authz-rest-employee</module>
+        <module>app-authz-spring-security</module>
         <module>authz-js-policies</module>
     </modules>
 
