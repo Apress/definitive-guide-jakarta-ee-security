@@ -62,7 +62,8 @@ public class MyPublishingRealm extends JdbcRealm {
           getName());
     }
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         Set<String> roleNames = new HashSet<>();
         Set<String> permissions = new HashSet<>();
