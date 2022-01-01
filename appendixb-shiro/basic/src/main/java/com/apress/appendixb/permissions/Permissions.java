@@ -31,7 +31,7 @@ public class Permissions {
         Subject currentUser = SecurityUtils.getSubject();
 
         if (!currentUser.isAuthenticated()) {
-          UsernamePasswordToken token = new UsernamePasswordToken("paul.reader", "password4");
+          UsernamePasswordToken token = new UsernamePasswordToken("guest.reader", "password4");
           token.setRememberMe(true);
           try {
               currentUser.login(token);
@@ -58,10 +58,10 @@ public class Permissions {
             log.info("Welcome, Guest");
         }
 
-        if(currentUser.isPermitted("/articles/drafts/new-article")) {
-            log.info("You can access articles");
+        if(currentUser.isPermitted("/chapters/drafts/new-chapter")) {
+            log.info("You can access draft chapters");
         } else {
-            log.info("You cannot access articles!");
+            log.info("You cannot access draft chapters!");
         }
         currentUser.logout();
     }

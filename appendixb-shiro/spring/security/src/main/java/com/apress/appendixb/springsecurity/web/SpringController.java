@@ -20,18 +20,18 @@ public class SpringController {
 
     @GetMapping("/")
     public String getIndex() {
-        return "comparison/index";
+        return "integration/index";
     }
 
     @GetMapping("/login")
     public String showLoginPage() {
-        return "comparison/login";
+        return "integration/login";
     }
 
     @RequestMapping("/login-error")
     public String loginError(Model model) {
         model.addAttribute("error", "Invalid Credentials");
-        return "comparison/login";
+        return "integration/login";
     }
 
     @PostMapping("/login")
@@ -42,14 +42,14 @@ public class SpringController {
     @GetMapping("/home")
     public String showHomePage(HttpServletRequest req, Model model) {
         addUserAttributes(model);
-        return "comparison/home";
+        return "integration/home";
     }
 
     @GetMapping("/admin")
     public String adminOnly(HttpServletRequest req, Model model) {
         addUserAttributes(model);
         model.addAttribute("adminContent", "only admin can view this");
-        return "comparison/home";
+        return "integration/home";
     }
 
     private void addUserAttributes(Model model) {

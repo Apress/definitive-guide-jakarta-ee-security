@@ -20,7 +20,7 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.jdbc.JdbcRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
-public class MyCustomRealm extends JdbcRealm {
+public class MyPublishingRealm extends JdbcRealm {
 
     private Map<String, String> credentials = new HashMap<>();
     private Map<String, Set<String>> roles = new HashMap<>();
@@ -36,10 +36,10 @@ public class MyCustomRealm extends JdbcRealm {
       roles.put("user3", new HashSet<>(Arrays.asList("author")));
 
       perm.put("admin", new HashSet<>(Arrays.asList("*")));
-      perm.put("editor", new HashSet<>(Arrays.asList("articles:*")));
+      perm.put("editor", new HashSet<>(Arrays.asList("chapters:*")));
       perm.put("author",
-        new HashSet<>(Arrays.asList("articles:compose",
-          "articles:save")));
+        new HashSet<>(Arrays.asList("chapters:write",
+          "chapters:save")));
 
     }
 
