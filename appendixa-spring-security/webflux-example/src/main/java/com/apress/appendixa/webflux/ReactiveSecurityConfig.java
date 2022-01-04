@@ -7,6 +7,8 @@ import org.springframework.security.config.annotation.web.reactive.EnableWebFlux
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.userdetails.MapReactiveUserDetailsService;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 
 @Configuration
@@ -26,19 +28,29 @@ public class ReactiveSecurityConfig {
     /**
      * Sample in-memory user details service.
      */
-    @SuppressWarnings("deprecation")
     @Bean
     public MapReactiveUserDetailsService userDetailsService() {
         return new MapReactiveUserDetailsService(
-                User.withDefaultPasswordEncoder()
-                        .username("user")
-                        .password("password")
-                        .roles("USER")
-                        .build(),
-                User.withDefaultPasswordEncoder()
-                        .username("admin")
-                        .password("password")
-                        .roles("USER,ADMIN")
-                        .build());
+    		User.builder() 
+		 		.passwordEncoder(s -> encode(s))
+		 		.username("user")
+		 		.password("password")
+		 		.roles("USER")
+		 	.build(),
+			User.builder() 
+		 		.passwordEncoder(s -> encode(s))
+                .username("admin")
+                .password("password")
+                .roles("USER,ADMIN")
+            .build());
     }
+    
+	private String encode(String s) {
+		return passwordEncoder().encode(s);
+	}
+	
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();	
+	}
 }
