@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 import java.security.Principal;
 
 /**
- * REST endpoint for various utility methods.
+ * REST endpoint
  */
 @RestController
 public class HelloController {
