@@ -6,4 +6,4 @@ This is a sample Spring Boot Reactive secured application.
 
 Run `mvn clean install spring-boot:run`.
 
-Then browse <http://localhost:8080/public> or <http://localhost:8080/private> (expects "user" and "password" with basic authentication).
+Then browse <http://localhost:8080/public> or <http://localhost:8080/private> (expects "user" and "password" with basic authentication or "admin" and "password" for a different role).
