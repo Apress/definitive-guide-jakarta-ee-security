@@ -16,5 +16,6 @@
 	
     <modules>
         <module>basic-auth-example</module>
+        <module>webflux-example</module>
     </modules>
 </project>
