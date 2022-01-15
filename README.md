@@ -1,9 +1,16 @@
 # Apress Source Code
 
-This repository accompanies [*The Definitive Guide to Jakarta EE Security*](https://www.apress.com/%isbn%) by Arjan Tijms, Werner Keil, and Teo Bais (Apress, 2021).
+This repository accompanies [*The Definitive Guide to Jakarta EE Security*](https://www.apress.com/%isbn%) by Arjan Tijms, Werner Keil, and Teo Bais (Apress, 2022).
 
 [comment]: #cover
-![Cover image](https://user-images.githubusercontent.com/5684688/148689114-65149efb-c1c7-4a23-89db-8f2dc9715d5c.jpg)
+
+📫 **Available for preorder** | Updates at [![Twitter](https://img.shields.io/badge/Twitter-jakartasecbook-informational?style=flat-square&logo=twitter&logoColor=white)](https://www.twitter.com/jakartasecbook/)
+
+
+<a href="https://www.amazon.com/Definitive-Guide-Security-Jakarta-Authentication/dp/1484279441/ref=sr_1_1?qid=1642032426">
+  <img  src="jakarta-ee-security-cover.jpg" alt="Jakarta EE Security book"
+    width=200" height="270"/>
+</a>
 
 
 Download the files as a zip using the green button, or clone the repository to your machine using Git.
