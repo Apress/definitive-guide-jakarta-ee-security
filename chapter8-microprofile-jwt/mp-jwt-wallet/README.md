@@ -1,9 +1,9 @@
 # mp-jwt-wallet
 Sample project for chapter 8 of the book The Definitive Guide to Jakarta EE Security
 
-[Note:] this version has been updated to run against the 2.7.0.Final release of Thorntail.
+**Note:** this version runs against the 2.7.0.Final release of Thorntail. As Thorntail has announced end of life, this example could run on Quarkus, but you'll have to migrate it yourself.
 
-# Updated Instructions for the 2.7.0.Final release of Thorntail
+# Instructions for the 2.7.0.Final release of Thorntail
 1. git clone https://github.com/Apress/definitive-guide-jakarta-ee-security
 1. cd chapter8-microprofile-jwt/mp-jwt-wallet
 1. Run `mvn test` from the directory to build and run the test example

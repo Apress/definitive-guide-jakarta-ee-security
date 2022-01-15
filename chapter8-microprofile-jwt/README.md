@@ -5,5 +5,6 @@ in a Jakarta EE application.
 
 ## Examples in this chapter
 
+ * [Quarkus: USING JWT RBAC](https://quarkus.io/version/main/guides/security-jwt)
  * [MicroProfile JWT Wallet Example](mp-jwt-wallet)
  
