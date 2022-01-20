@@ -14,7 +14,9 @@
     <name>Chapter 8 - MicroProfile JWT</name>
 
     <modules>
+        <!-- Must be run with Java 8-11
         <module>mp-jwt-wallet</module>
+        -->
     </modules>
 
     <dependencies>

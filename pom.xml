@@ -57,10 +57,14 @@
 	</prerequisites>
 
 	<modules>
+		<!--
 		<module>chapter3-jakarta-authentication</module>
+		-->
 		<module>chapter5-jakarta-security</module>
 		<module>chapter6-javase-underpinnings</module>
 		<module>chapter8-microprofile-jwt</module>
+		<module>appendixa-spring-security</module>
+		<module>appendixb-shiro</module>
 		<module>appendixc-identity-management</module>
 	</modules>
 
@@ -147,7 +151,7 @@
 						<configuration>
 							<rules>
 								<requireMavenVersion>
-									<version>3.8.0</version>
+									<version>3.6.0</version>
 								</requireMavenVersion>
 							</rules>
 						</configuration>

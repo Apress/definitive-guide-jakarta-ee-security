@@ -13,9 +13,14 @@
 
     <name>Chapter 3 - Authentication</name>
 
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
     <modules>
-        <module>3-basic-sam</module>
-        <module>3-basic-sam-callback</module>
+        <module>3-basic-sam</module>        
+        <module>3-basic-sam-callback</module>                
         <module>3-simple-sam</module>
         <module>3-simple-sam-gf</module>
         <module>3-simple-sam-keycallback</module>

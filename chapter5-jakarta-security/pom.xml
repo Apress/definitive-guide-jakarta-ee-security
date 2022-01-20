@@ -13,6 +13,11 @@
 
     <name>Chapter 5 - Jakarta Security</name>
 
+	<properties>
+		<maven.compiler.source>16</maven.compiler.source>
+		<maven.compiler.target>16</maven.compiler.target>
+	</properties>
+
     <modules>
         <module>5-basic-mechanism-custom-store</module>
         <module>5-form-mechanism-custom-store</module>

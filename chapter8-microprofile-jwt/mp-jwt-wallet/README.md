@@ -3,6 +3,8 @@ Sample project for chapter 8 of the book The Definitive Guide to Jakarta EE Secu
 
 **Note:** this version runs against the 2.7.0.Final release of Thorntail. As Thorntail has announced end of life, this example could run on Quarkus, but you'll have to migrate it yourself.
 
+**Note:** this example must be run with **Java 11** maximum, it (Thorntail) won't work with Java 12 or higher, so use the LTS version 11 of the JDK to run it.
+
 # Instructions for the 2.7.0.Final release of Thorntail
 1. git clone https://github.com/Apress/definitive-guide-jakarta-ee-security
 1. cd chapter8-microprofile-jwt/mp-jwt-wallet
@@ -35,8 +37,8 @@ Sample project for chapter 8 of the book The Definitive Guide to Jakarta EE Secu
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ mp-jwt-wallet ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1 source file to ~/git/definitive-guide-jakarta-ee-security/chapter8-microprofile-jwt/mp-jwt-wallet/target/test-classes
-[WARNING] /C:/Users/Werner/git/definitive-guide-jakarta-ee-security/chapter8-microprofile-jwt/mp-jwt-wallet/src/test/java/org/eclipse/microprofile/test/jwt/MySecureWalletTest.java: ~/git/definitive-guide-jakarta-ee-security/chapter8-microprofile-jwt/mp-jwt-wallet/src\test\java\org\eclipse\microprofile\test\jwt\MySecureWalletTest.java uses or overrides a deprecated API.
-[WARNING] /C:/Users/Werner/git/definitive-guide-jakarta-ee-security/chapter8-microprofile-jwt/mp-jwt-wallet/src/test/java/org/eclipse/microprofile/test/jwt/MySecureWalletTest.java: Recompile with -Xlint:deprecation for details.
+[WARNING] ~/git/definitive-guide-jakarta-ee-security/chapter8-microprofile-jwt/mp-jwt-wallet/src/test/java/org/eclipse/microprofile/test/jwt/MySecureWalletTest.java: ~/git/definitive-guide-jakarta-ee-security/chapter8-microprofile-jwt/mp-jwt-wallet/src\test\java\org\eclipse\microprofile\test\jwt\MySecureWalletTest.java uses or overrides a deprecated API.
+[WARNING] ~/git/definitive-guide-jakarta-ee-security/chapter8-microprofile-jwt/mp-jwt-wallet/src/test/java/org/eclipse/microprofile/test/jwt/MySecureWalletTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ mp-jwt-wallet ---
 [INFO] 
