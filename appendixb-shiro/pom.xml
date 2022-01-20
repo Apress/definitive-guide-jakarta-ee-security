@@ -16,6 +16,6 @@
 	
     <modules>
         <module>basic</module>
-        <!-- module>spring</module -->
+        <module>spring</module>
     </modules>
 </project>
