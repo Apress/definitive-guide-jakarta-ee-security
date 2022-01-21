@@ -42,8 +42,8 @@
 			</roles>
 		</developer>
 		<developer>
-			<id>thodorisbais</id>
-			<name>Thodoris Bais</name>
+			<id>teobais</id>
+			<name>Teo Bais</name>
 			<organization>Apress</organization>
 			<organizationUrl>https://www.apress.com</organizationUrl>
 			<roles>
@@ -105,14 +105,14 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.8.1</version>
+			<version>5.8.2</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.8.1</version>
+			<version>5.8.2</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -152,7 +152,7 @@
 						<configuration>
 							<rules>
 								<requireMavenVersion>
-									<version>3.6.0</version>
+									<version>3.8.0</version>
 								</requireMavenVersion>
 							</rules>
 						</configuration>
