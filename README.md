@@ -4,7 +4,7 @@ This repository accompanies [*The Definitive Guide to Jakarta EE Security*](http
 
 [comment]: #cover
 
-📫 **Available for preorder** | Updates at [![Twitter](https://img.shields.io/badge/Twitter-jakartasecbook-informational?style=flat-square&logo=twitter&logoColor=white)](https://www.twitter.com/jakartasecbook/)
+📫 **Available for sale** | Updates at [![Twitter](https://img.shields.io/badge/Twitter-jakartasecbook-informational?style=flat-square&logo=twitter&logoColor=white)](https://www.twitter.com/jakartasecbook/)
 
 
 <a href="https://www.amazon.com/Definitive-Guide-Security-Jakarta-Authentication/dp/1484279441/ref=sr_1_1?qid=1642032426">
