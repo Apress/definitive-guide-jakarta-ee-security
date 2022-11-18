@@ -17,9 +17,9 @@ Download the files as a zip using the green button, or clone the repository to y
 
 ## Requirements
 
-To be able to execute 'mvn clean package -DskipTests' successfully you need at least Java 11 installed.
+To be able to execute 'mvn clean package -DskipTests' successfully you need Java 17.
 
-For [chapter 5](chapter5-jakarta-security) you need at least Java 16.
+While most chapters, except [chapter 5](chapter5-jakarta-security) also still run with Java 11.
 
 ## Releases
 
