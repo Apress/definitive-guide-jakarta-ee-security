@@ -1,6 +1,6 @@
 # Chapter 7: Jakarta EE Implementations
 
-This module contains the source code for the examples from chapter 8 of the book The Definitive Guide to Jakarta EE Security. The examples in this chapter cover various runtimes implementing Jakarta EE.
+This module contains the source code for the examples from chapter 7 of the book The Definitive Guide to Jakarta EE Security. The examples in this chapter cover various runtimes implementing Jakarta EE.
 
 ## Examples in this chapter
 
