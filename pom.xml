@@ -53,7 +53,7 @@
 	</developers>
 
 	<prerequisites>
-		<maven>3.0.0</maven>
+		<maven>3.8.0</maven>
 	</prerequisites>
 
 	<modules>
