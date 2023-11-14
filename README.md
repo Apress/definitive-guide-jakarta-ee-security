@@ -1,6 +1,6 @@
 # Apress Source Code
 
-This repository accompanies [*The Definitive Guide to Jakarta EE Security*](https://www.apress.com/%isbn%) by Arjan Tijms, Werner Keil, and Teo Bais (Apress, 2022).
+This repository accompanies [*The Definitive Guide to Jakarta EE Security*](https://link.springer.com/book/10.1007/978-1-4842-7945-8) by Arjan Tijms, Werner Keil, and Teo Bais (Apress, 2022).
 
 [comment]: #cover
 
