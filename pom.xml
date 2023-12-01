@@ -57,9 +57,7 @@
 	</prerequisites>
 
 	<modules>
-		<!--
 		<module>chapter3-jakarta-authentication</module>
-		-->
 		<module>chapter5-jakarta-security</module>		
 		<module>chapter6-javase-underpinnings</module>
 		<module>chapter8-microprofile-jwt</module>

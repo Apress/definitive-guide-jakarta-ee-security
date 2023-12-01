@@ -19,13 +19,13 @@
 	</properties>
 
     <modules>
-        <module>3-basic-sam</module>        
+        <!-- <module>3-basic-sam</module>        
         <module>3-basic-sam-callback</module>                
-        <module>3-simple-sam</module>
+        <module>3-simple-sam</module>-->
         <module>3-simple-sam-gf</module>
-        <module>3-simple-sam-keycallback</module>
-        <module>3-simple-sam-principal</module>
-        <module>3-simple-sam-session</module>
-        <module>3-simple-sam-wrapping</module>
+        <!-- <module>3-simple-sam-keycallback</module>
+        <module>3-simple-sam-principal</module> 
+        <module>3-simple-sam-session</module> 
+        <module>3-simple-sam-wrapping</module>-->
     </modules>
 </project>
