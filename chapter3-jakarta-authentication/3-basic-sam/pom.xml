@@ -12,7 +12,7 @@
     <packaging>war</packaging>
 
     <name>BASIC ServerAuthModule</name>
-
+<!--
     <dependencies>
         <dependency>
             <groupId>org.omnifaces</groupId>
@@ -20,4 +20,5 @@
             <version>1.0</version>
         </dependency>
     </dependencies>
+    -->
 </project>
