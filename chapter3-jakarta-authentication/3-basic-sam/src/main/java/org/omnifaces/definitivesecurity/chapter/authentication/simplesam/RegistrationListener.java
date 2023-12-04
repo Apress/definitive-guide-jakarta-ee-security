@@ -1,7 +1,6 @@
 package org.omnifaces.definitivesecurity.chapter.authentication.simplesam;
 
-import org.omnifaces.authenticationutils.AuthenticationUtils;
-
+import jakarta.security.auth.message.config.AuthConfigFactory;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
@@ -9,6 +8,7 @@ import jakarta.servlet.annotation.WebListener;
 /**
  * 
  * @author Arjan Tijms
+ * @author Werner Keil
  * 
  */
 @WebListener
@@ -18,8 +18,9 @@ public class RegistrationListener
     @Override
     public void contextInitialized(
         ServletContextEvent sce) {
-        AuthenticationUtils
-            .registerServerAuthModule(
+        AuthConfigFactory
+        .getFactory()
+        .registerServerAuthModule(
                 new BasicServerAuthModule(),
                 sce.getServletContext());
     }

@@ -12,12 +12,4 @@
     <packaging>war</packaging>
 
     <name>Simple ServerAuthModule</name>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.omnifaces</groupId>
-            <artifactId>authentication-utils</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
 </project>

@@ -78,6 +78,7 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
+		<jakartaee.version>9.1.0</jakartaee.version>
 	</properties>
 
 	<dependencyManagement>
@@ -86,7 +87,7 @@
 			<dependency>
 				<groupId>jakarta.platform</groupId>
 				<artifactId>jakarta.jakartaee-api</artifactId>
-				<version>9.1.0</version>
+				<version>${jakartaee.version}</version>
 				<scope>provided</scope>
 			</dependency>
 		</dependencies>

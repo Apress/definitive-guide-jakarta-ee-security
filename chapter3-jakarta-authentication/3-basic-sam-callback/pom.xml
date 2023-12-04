@@ -10,19 +10,9 @@
 
     <artifactId>basic-sam-callback</artifactId>
     <packaging>war</packaging>
-
     <name>BASIC ServerAuthModule - Callback</name>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <jakartaee.version>10.0.0</jakartaee.version>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.omnifaces</groupId>
-            <artifactId>authentication-utils</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
 </project>

@@ -18,12 +18,25 @@
 		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 
+	<dependencyManagement>
+		<dependencies>
+			<!-- Target Jakarta EE 9 server. -->
+			<dependency>
+				<groupId>jakarta.platform</groupId>
+				<artifactId>jakarta.jakartaee-api</artifactId>
+	 			<version>10.0.0</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
     <modules>
-        <!-- <module>3-basic-sam</module>        
+        <module>3-basic-sam</module>        
         <module>3-basic-sam-callback</module>                
-        <module>3-simple-sam</module>-->
+        <module>3-simple-sam</module>
         <module>3-simple-sam-gf</module>
-        <!-- <module>3-simple-sam-keycallback</module>
+        <module>3-simple-sam-keycallback</module>
+        <!-- 
         <module>3-simple-sam-principal</module> 
         <module>3-simple-sam-session</module> 
         <module>3-simple-sam-wrapping</module>-->

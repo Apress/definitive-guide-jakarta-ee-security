@@ -2,6 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+	<properties>
+		<jakartaee.version>10.0.0</jakartaee.version>
+	</properties>
+	
     <parent>
         <groupId>com.apress.jakartasecbook</groupId>
         <artifactId>chapter3-jakarta-authentication</artifactId>
@@ -12,13 +16,4 @@
     <packaging>war</packaging>
 
     <name>BASIC ServerAuthModule</name>
-<!--
-    <dependencies>
-        <dependency>
-            <groupId>org.omnifaces</groupId>
-            <artifactId>authentication-utils</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
-    -->
 </project>

@@ -10,16 +10,11 @@
 
     <artifactId>simple-sam-keycallback</artifactId>
     <packaging>war</packaging>
-
     <name>Simple ServerAuthModule - Key callback</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.omnifaces</groupId>
-            <artifactId>authentication-utils</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
+	<properties>
+		<jakartaee.version>10.0.0</jakartaee.version>
+	</properties>
 
     <build>
         <finalName>simple-sam</finalName>
