@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.apress.jakartasecbook</groupId>
         <artifactId>def-guide-jakarta-ee-security</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.1</version>
     </parent>
 
     <artifactId>chapter3-jakarta-authentication</artifactId>
@@ -18,17 +18,13 @@
 		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<!-- Target Jakarta EE 9 server. -->
-			<dependency>
-				<groupId>jakarta.platform</groupId>
-				<artifactId>jakarta.jakartaee-api</artifactId>
-	 			<version>10.0.0</version>
-				<scope>provided</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>jakarta.platform</groupId>
+			<artifactId>jakarta.jakartaee-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 
     <modules>
         <module>3-basic-sam</module>        

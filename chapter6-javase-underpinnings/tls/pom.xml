@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.apress.jakartasecbook</groupId>
         <artifactId>chapter6-javase-underpinnings</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.1</version>
     </parent>
 
     <artifactId>tls</artifactId>

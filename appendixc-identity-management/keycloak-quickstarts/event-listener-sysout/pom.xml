@@ -150,7 +150,7 @@
         		<plugin>
         			<groupId>org.eclipse.m2e</groupId>
         			<artifactId>lifecycle-mapping</artifactId>
-        			<version>1.0.1-SNAPSHOT</version>
+        			<version>1.0.1</version>
         			<configuration>
         				<lifecycleMappingMetadata>
         					<pluginExecutions>
