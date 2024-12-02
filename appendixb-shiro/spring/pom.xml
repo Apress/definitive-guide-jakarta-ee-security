@@ -11,7 +11,7 @@
   	<parent>
         <groupId>com.apress.jakartasecbook</groupId>
         <artifactId>appendixb-shiro</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <dependencies>
@@ -155,7 +155,7 @@
                 <plugin>
                     <groupId>org.eclipse.m2e</groupId>
                     <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
+                    <version>1.0.1-SNAPSHOT</version>
                     <configuration>
                         <lifecycleMappingMetadata>
                             <pluginExecutions>

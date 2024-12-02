@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.apress.jakartasecbook</groupId>
 	<artifactId>spring-security-basic-auth-example</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>Basic Auth Example</name>
 	<properties>
 		<java.version>11</java.version>
