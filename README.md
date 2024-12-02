@@ -23,7 +23,7 @@ While most chapters, except [chapter 5](chapter5-jakarta-security) also still ru
 
 ## Releases
 
-Release 1.0.0 corresponds to the code in the published book, without corrections or updates.
+Release [1.0.0](releases/tag/1.0.0) corresponds to the code in the published book, without corrections or updates.
 
 ## Contributions
 
