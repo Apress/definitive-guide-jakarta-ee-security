@@ -93,7 +93,6 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
-		<!-- Target Jakarta EE 9 server. -->
 		<dependency>
 			<groupId>jakarta.platform</groupId>
 			<artifactId>jakarta.jakartaee-api</artifactId>
