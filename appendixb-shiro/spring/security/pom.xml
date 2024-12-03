@@ -9,7 +9,7 @@
     <parent>
         <groupId>com.apress.jakartasecbook</groupId>
          <artifactId>appendixb-shiro-spring-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.1.0-SNAPSHOT</version>
         <relativePath>../parent</relativePath>
     </parent>
 

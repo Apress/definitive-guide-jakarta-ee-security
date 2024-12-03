@@ -6,7 +6,7 @@
 
 	<groupId>com.apress.jakartasecbook</groupId>
 	<artifactId>def-guide-jakarta-ee-security</artifactId>
-	<version>1.0.1</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>The Definitive Guide to Jakarta EE Security</name>
@@ -78,7 +78,7 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-		<jakartaee.version>10.0.0</jakartaee.version>
+		<jakartaee.version>10.0.0</jakartaee.version><!-- TODO Update to Jakarta EE 11 when platform is final -->
 	</properties>
 
 	<dependencyManagement>
